@@ -21,7 +21,7 @@
       
       body{
            font-family: 'IranianSansRegular'; 
-     font-weight: normal; 
+          font-weight: normal; 
      font-style: normal;
       }
 
@@ -215,7 +215,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="/"><i class="fa fa-home"></i></a></li>
+            <li class="scroll "><a href="/"><i class="fa fa-home"></i></a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">اطلاعات کتاب<span class="caret"></span></a>
               <ul class="dropdown-menu">
