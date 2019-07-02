@@ -292,8 +292,8 @@
     </div>
   </footer>
 
-  <div class="container-fluid hidden">
-    <div class="row" id="downloadLinks">
+  <div class="container-fluid">
+    <div class="row hidden" id="downloadLinks">
       <div class="col-xs-4 col-md-4 text-center">
           <a href="/sibApp"><img class="img-responsive center-block" src="images/sibApp.png" alt="" height="50" width="200"></a>
       </div>
