@@ -10,7 +10,7 @@
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>سمفونی پیدایش</h2>
             <p>نویسنده: احمد معافی</p>
-            <img src="/img/book.jpg" class="rounded mx-auto d-block" alt="book">         
+            <img src="/img/book.jpg" class="img-responsive rounded mx-auto d-block" alt="book">         
           </div>
         </div> 
       </div>
