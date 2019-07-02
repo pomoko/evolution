@@ -18,7 +18,8 @@ a:hover, a:focus {
 	color: #7368D5
 }
 
-.main-nav, 
+.main-nav,
+.dropdown ul, 
 .service-icon, 
 .progress-bar.progress-bar-primary, 
 .single-table.featured, 
