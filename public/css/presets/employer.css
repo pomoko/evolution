@@ -88,7 +88,7 @@ a:hover, a:focus {
 @media (max-width: 767px) {
 	.social-icons-container {
 	  position: fixed;
-	  top: 15%;
+	  top: 20%;
 	  left:0%;
 
 	}
