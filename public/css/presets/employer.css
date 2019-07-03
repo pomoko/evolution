@@ -79,7 +79,7 @@ a:hover, a:focus {
 @media (min-width: 768px) and (max-width: 991px) {
 	.social-icons-container {
 	  position: fixed;
-	  top: 10%;
+	  top: 30%;
 	  left:0%;
 
 	}
