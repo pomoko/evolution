@@ -80,6 +80,7 @@ a:hover, a:focus {
 	.social-icons-container {
 	  position: fixed;
 	  top: ;
+	  right:unset;
 	  left:0%;
 
 	}
@@ -89,6 +90,7 @@ a:hover, a:focus {
 	.social-icons-container {
 	  position: fixed;
 	  top: 110px;
+	  right:unset;
 	  left:0%;
 
 	}
