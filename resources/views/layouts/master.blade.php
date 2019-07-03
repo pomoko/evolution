@@ -47,45 +47,38 @@
 
 
   <!-- Message Modal -->
-  <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">لطفآ نظرات و انتقادات خود را با ما در میان بگذارد</h5>
+          <h5 class="modal-title" id="exampleModalLabel">درگاه خرید را  انتخاب کنید</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form action="/action_page.php">
-            <div class="form-group">
-              <label for="email">آدرس ایمیل شما:</label>
-              <input type="email" class="form-control" id="email" placeholder="ایمیل خود را وارد کنید" name="email" required>
-            </div>
-            <div class="form-group md-form form-sm form-3 pl-0">
-              <label for="sel1">موضوع پیغام</label>
-              <select class="form-control mt-0 amber-border" id="emailSubject">
-                <option>گزارش خطا</option>
-                <option>درخواست افزودن ویژگی جدید</option>
-                <option>قیمت گذاری و پرداخت</option>
-                <option>غیره</option>
-              </select>
-            </div><!--form-group-->
-            <div class="form-group">
-              <label for="pwd">متن پیغام:</label>
-              <textarea id="emailBody" class="form-control" rows="3" placeholder="لطفآ متن پیغام خود را وارد نمایید"></textarea>
-            </div>
-  <!--           <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember"> Remember me
-              </label>
-            </div> -->
-          </form>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              داخل ایران
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">کتاب فروشی ها</a>
+            <a href="#" class="list-group-item list-group-item-action">خرید اینترنتی</a>
+          </div>
+
+          <hr/>
+
+
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              سایر کشورها
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">A</a>
+            <a href="#" class="list-group-item list-group-item-action">B</a>
+          </div>
+
         </div>
         <div class="modal-footer">
-          <span id="successMessage" class="collapse">پیغام شما ارسال گردید.</span>
           <button type="button" id="btnCancelMessage" class="btn btn-secondary" data-dismiss="modal">لغو</button>
-          <button type="button" id="btnSubmitEmail" class="btn btn-primary submitEmail">ارسال</button>
         </div>
       </div>
     </div>
@@ -293,18 +286,13 @@
   </footer>
 
   <div class="container-fluid">
-    <div class="row hidden" id="downloadLinks">
-      <div class="col-xs-4 col-md-4 text-center">
-          <a href="/sibApp"><img class="img-responsive center-block" src="images/sibApp.png" alt="" height="50" width="200"></a>
+    <div class="row" id="downloadLinks">
+
+      <div class="col-xs-12 col-md-12 text-center">
+        <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">خرید کتاب</button>
+
       </div>
 
-      <div class="col-xs-4 col-md-4 text-center">
-        <a href="/googlePlay"><img class="img-responsive center-block"" src="images/googlePlay.png" alt="" height="50" width="200"></a>
-      </div>
-
-      <div class="col-xs-4 col-md-4 text-center">
-        <a href="/cafeBazaar"><img class="img-responsive center-block" src="images/cafeBazaar.png" alt="" height="50" width="200"></a>
-      </div>
     </div>
   </div>
 
