@@ -9,7 +9,7 @@
     <link href={{asset('css/bootstrap.min.css')}} rel="stylesheet">
     <link href={{asset('css/animate.min.css')}} rel="stylesheet"> 
     <link href={{asset('css/font-awesome.min.css')}} rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href={{asset("css/lightbox.css")}} rel="stylesheet">
     <link href={{asset("css/main.css")}} rel="stylesheet">
     <link id="css-preset" href={{asset('css/presets/employer.css')}} rel="stylesheet">
@@ -229,7 +229,9 @@
             <li class="scroll"><a href="#pricing">درباره نویسنده</a></li>
 <!--             <li class="scroll"><a href="#portfolio">برخی از کارفرمایان</a></li>  -->
 <!--             <li class="scroll"><a href="#blog">Blog</a></li> -->
-            <li class="scroll"><a href="#footer">خرید کتاب</a></li> 
+            <li class="scroll "><a href="/"><i class="fa fa-instagram"></i></a></li>
+            <li class="scroll "><a href="/"><i class="fa fa-facebook"></i></a></li>
+            <li class="scroll "><a href="/"><i class="fa fa-twitter"></i></a></li>
 
           </ul>
         </div>
@@ -238,6 +240,12 @@
   </header><!--/#home-->
 
   <body>
+    <!--sticky social icons-->
+    <div class="social-icons-container">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
+    </div>
     
         <div class="container">
             @yield('content')
@@ -288,7 +296,7 @@
   <div class="container-fluid">
     <div class="row" id="downloadLinks">
 
-      <div class="col-xs-12 col-md-12 text-center">
+      <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
         <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">خرید کتاب</button>
 
       </div>
