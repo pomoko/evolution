@@ -56,7 +56,7 @@ a:hover, a:focus {
 
 .social-icons-container {
   position: fixed;
-  top: 20%;
+  top: 140px;
   right:20px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);

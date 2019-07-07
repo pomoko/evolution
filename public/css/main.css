@@ -980,7 +980,7 @@ ul.address {
   background-color: #ff6b00;
 }
 
-#downloadLinks{
+#stickyBtns{
   position: fixed;
   bottom: 10px;
   right: 10px;

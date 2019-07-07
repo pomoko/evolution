@@ -225,13 +225,10 @@
                 <li class="scroll"><a href="#">c</a></li>
               </ul>
             </li>            
-            <li class="scroll"><a href="#team">نظرات خوانندگان</a></li>  
-            <li class="scroll"><a href="#pricing">درباره نویسنده</a></li>
+            <li class="scroll"><a href="/comments">نظرات خوانندگان</a></li>  
+            <li class="scroll"><a href="#pricing">تماس با نویسنده</a></li>
 <!--             <li class="scroll"><a href="#portfolio">برخی از کارفرمایان</a></li>  -->
 <!--             <li class="scroll"><a href="#blog">Blog</a></li> -->
-            <li class="scroll "><a href="/"><i class="fa fa-instagram"></i></a></li>
-            <li class="scroll "><a href="/"><i class="fa fa-facebook"></i></a></li>
-            <li class="scroll "><a href="/"><i class="fa fa-twitter"></i></a></li>
 
           </ul>
         </div>
@@ -293,8 +290,16 @@
     </div>
   </footer>
 
-  <div class="container-fluid">
-    <div class="row" id="downloadLinks">
+  <div id="stickyBtns" class="container-fluid">
+    <div id='addCommentBtn' class="row hidden">
+
+      <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+        <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#commentModal">نظر خود را بنویسید</button>
+
+      </div>
+
+    </div>
+    <div class="row">
 
       <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
         <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">خرید کتاب</button>
@@ -317,6 +322,13 @@
   <script type="text/javascript" src={{asset("js/main.js")}}></script>
   <script type="text/javascript" src={{asset("js/ajax.js")}}></script>
   <script type="text/javascript" src={{asset("js/helper.js")}}></script>
+
+  <script type="text/javascript">
+    if($('#commentsPage').length){
+      $("#addCommentBtn").removeClass("hidden");
+    }
+  </script>
+}
 
 </body>
 </html>

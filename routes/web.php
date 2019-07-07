@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/info/preface', 'HomeController@preface');
 Route::get('/info/contents', 'HomeController@contents');
 Route::get('/info/articles', 'HomeController@articles');
+
+Route::get('/comments', 'CommentController@index');
