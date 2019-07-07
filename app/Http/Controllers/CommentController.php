@@ -24,10 +24,9 @@ class CommentController extends Controller
     public function index()
     {
         //
-        //$comments = Comment::all();
-       // return view('comments/index', compact('comments'));
-        //
-        return view('comments/comments');
+        $comments = Comment::all()->reverse();
+        return view('comments/comments', compact('comments'));
+        
 
     }
 
@@ -49,7 +48,29 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $response["success"] = false;
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'comment' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+//            return response()->json(['errors'=>$validator->errors()->all()]);
+            //return json_encode(['errors'=>$validator->errors()->all()]);
+            return json_encode(['errors'=>$validator->messages()]);
+            //return withErrors($validator)->withInput();
+        }
+
+        $datePersian = getPersianDateWithMonthName(date("Y", time())."-".date("m", time())."-".date("d", time()));
+        $insert = Comment::create(['name'=>$request->name, 'email'=>$request->email, 'comment'=>$request->comment, "date_persian"=>$datePersian]);
+
+        $comments = Comment::all()->reverse();
+
+        return json_encode($comments);
+
+
     }
 
     /**

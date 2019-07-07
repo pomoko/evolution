@@ -23,9 +23,9 @@
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('name', 'نام:') !!} 
-                    <span id='nameChecked' class="fa fa-check-circle"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    <span id='nameError' class="fa fa-times-circle text-danger hidden"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::text('نام', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off']) !!}
+                  {!! Form::text('نام', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
@@ -33,9 +33,9 @@
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('email', 'پست الکترونیک:') !!} 
-                    <span id='nameChecked' class="fa fa-check-circle"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    <span id='emailError' class="fa fa-times-circle text-danger hidden"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::text('نام', null, ['id'=>'email', 'class'=>'form-control', 'placeholder'=>'sldf','autocomplete'=>'off']) !!}
+                  {!! Form::text('نام', null, ['id'=>'email', 'class'=>'form-control', 'placeholder'=>'sldf','autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
@@ -43,9 +43,9 @@
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('comment', 'نظر شما:') !!} 
-                    <span id='nameChecked' class="fa fa-check-circle"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    <span id='commentError' class="fa fa-times-circle text-danger hidden"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::textarea('نظر شما', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none']) !!}
+                  {!! Form::textarea('نظر شما', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
@@ -53,7 +53,7 @@
           <div class="row">
               <div class="col-md-12">
                   <div class="form-group">               
-                      {!! Form::button('ارسال', ['type'=>'submit', 'class'=>'btn btn-primary btn-md']) !!}
+                      {!! Form::button('ارسال', ['type'=>'submit','id'=>'btnSubmitComment', 'class'=>'btn btn-primary btn-md']) !!}
                   </div>
               </div>
 
@@ -69,7 +69,7 @@
       </div>
     </div>
   </div><!--message modal-->
-  <section id="comments">
+  <section id="commentsSection">
     <div class="container">
       <div class="row">
         <div class="text-center col-sm-8 col-sm-offset-2">
@@ -79,22 +79,27 @@
         </div>
       </div> 
 
-      <div class="row">
-        <div class="col-md-12">
-          <h4><strong>Name</strong></h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-muted">
-          date
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          comments go in here
-        </div>
-      </div>
-      <hr/>
+      <div id="comments">
+        @foreach($comments as $comment)
+          <div class="row">
+            <div class="col-md-12">
+              <h4><strong>{{$comment->name}}</strong></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-muted">
+              {{$comment->date_persian}}
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              {{$comment->comment}}
+            </div>
+          </div>
+          <hr/>
+        @endforeach
+      </div><!--comments-->
 
     </div>
   </section><!--/#services-->

@@ -22,3 +22,4 @@ Route::get('/info/contents', 'HomeController@contents');
 Route::get('/info/articles', 'HomeController@articles');
 
 Route::get('/comments', 'CommentController@index');
+Route::get('/comments/store', 'CommentController@store');

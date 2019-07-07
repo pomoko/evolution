@@ -19,6 +19,7 @@ class CreateCommentsTable extends Migration
             $table->string('email');
             $table->string('phone')->default("");
             $table->string('comment', 1000);
+            $table->string('date_persian');
             $table->timestamps();
         });
     }

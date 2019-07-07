@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-$.ajaxSetup(
-{
-    headers:
+    $.ajaxSetup(
     {
-        'X-CSRF-Token': $('input[name="_token"]').val()
-    }
-});
+        headers:
+        {
+            'X-CSRF-Token': $('input[name="_token"]').val()
+        }
+    });
 
 	$.ajaxSetup({
 		headers: {
@@ -59,23 +59,83 @@ $(document).on('click', '.preventDefault', function(e)
     e.preventDefault();
 });
 
-$(document).on('click', '.btnSubmitMessage', function(e){
-    var messageText = $('#messageText').val();
-   // $("#messageModal").modal('hide');
-    var email = $("#email").val();
-    var subject = $("#emailSubject").val();
-    var body = $("#emailBody").val();
-    $.get("/mail/sendMail",{email:email, subject:subject, body:body}, function(data){
-        // $("#btnSubmitMessage").hide('slow', function(){
-        //     $("#btnCancelMessage").attr('class', 'btn btn-primary');
-        //     $("#btnCancelMessage").html("تایید");
-        //     $("#successMessage").show();
-        // });
-        // console.log(data)
-         $("#messageModal").modal('hide');
+$(document).on('click', '#btnSubmitComment', function(e){
+    e.preventDefault();
+    $('#nameError').addClass("hidden");
+    $('#emailError').addClass("hidden");
+    $('#commentError').addClass("hidden");
+    var errorExists = false;
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var comment = $('#comment').val();
 
-        alert("پیغام شما ارسال گردید.");
-    });
+    // if(name == ""){
+    //     $('#nameError').removeClass("hidden");
+    //     errorExists = true;
+    // }
+    // if(email == ""){
+    //     $('#emailError').removeClass("hidden");
+    //     errorExists = true;
+    // }
+    // if(comment == ""){
+    //     $('#commentError').removeClass("hidden");
+    //     errorExists = true;
+    // }
+
+    // if(errorExists){
+    //     return;
+    // }
+    //alert(name + " " + phone + " " + comment); return;
+
+    $.ajax({
+        method: "GET",
+        url: "/comments/store",
+        data: {name:name, email:email, comment:comment},
+        // data: $('#associatePersonalityWithFilmForm').serialize(),
+        success:function(data){
+            jsonObject = JSON.parse(data);
+            console.log(jsonObject);
+
+            var html = "";
+
+          //  if($.isEmptyObject(data.error)){
+                $("#commentModal").modal('hide');
+
+//alert(data);
+                for(var i = Object.keys(jsonObject).length - 1; i >= 0 ; i-- ){
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12'>";
+                    html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12 text-muted'>";
+                    html += jsonObject[i].date_persian ;
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12'>";
+                    html += jsonObject[i].comment;
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<hr/>";
+
+                }
+
+                $("#comments").html(html);
+            // }
+            // else{
+            //     alert("came here");
+            //     alert(data.error);
+            // }
+
+        },
+        error:function(error){ }
+    })
+
 });
 
 $(document).on('click', '.selectPrice', function(e){
