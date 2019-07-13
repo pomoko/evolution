@@ -59,7 +59,7 @@ class CommentController extends Controller
         if ($validator->fails()) {
 //            return response()->json(['errors'=>$validator->errors()->all()]);
             //return json_encode(['errors'=>$validator->errors()->all()]);
-            return json_encode(['errors'=>$validator->messages()]);
+            return json_encode(['error'=>"true"]);
             //return withErrors($validator)->withInput();
         }
 

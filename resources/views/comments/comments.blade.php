@@ -10,7 +10,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">درگاه خرید را  انتخاب کنید</h5>
+          <h3 class="modal-title" id="exampleModalLabel">لطفآ نظر خود را وارد کنید</h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -23,7 +23,7 @@
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('name', 'نام:') !!} 
-                    <span id='nameError' class="fa fa-times-circle text-danger hidden"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    <span id='nameError' class="fa fa-times-circle text-danger hidden"> لطفا نام خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
                   {!! Form::text('نام', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
@@ -32,10 +32,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                  {!! Form::label('email', 'پست الکترونیک:') !!} 
-                    <span id='emailError' class="fa fa-times-circle text-danger hidden"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
-              
-                  {!! Form::text('نام', null, ['id'=>'email', 'class'=>'form-control', 'placeholder'=>'sldf','autocomplete'=>'off', 'required'=>'required']) !!}
+                  {!! Form::label('email', 'ایمیل:') !!} 
+                    <span id='emailError' class="fa fa-times-circle text-danger hidden"> لطفا آدرس ایمیل خود را وارد کنید</span>
+                    <span id='emailIncorrect' class="fa fa-times-circle text-danger hidden"> ایمیل اشتباه است</span>
+                  {!! Form::text('نام', null, ['id'=>'email', 'class'=>'form-control', 'placeholder'=>'ایمیل شما','autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
@@ -43,19 +43,21 @@
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('comment', 'نظر شما:') !!} 
-                    <span id='commentError' class="fa fa-times-circle text-danger hidden"></span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    <span id='commentError' class="fa fa-times-circle text-danger hidden"> لطفا نظرات خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
                   {!! Form::textarea('نظر شما', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
-
           <div class="row">
-              <div class="col-md-12">
-                  <div class="form-group">               
+              <div class="col-md-12 col-sm-12">
+                  <div class="form-group">   
                       {!! Form::button('ارسال', ['type'=>'submit','id'=>'btnSubmitComment', 'class'=>'btn btn-primary btn-md']) !!}
+                      <span id='errorExists' class="fa fa-times-circle text-danger hidden"> لطفا زمینه های نشان داده شده را تکمیل کنید</span>            
+
                   </div>
-              </div>
+              </div>              
+
 
           </div>
 

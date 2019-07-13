@@ -63,28 +63,32 @@ $(document).on('click', '#btnSubmitComment', function(e){
     e.preventDefault();
     $('#nameError').addClass("hidden");
     $('#emailError').addClass("hidden");
+    $('#emailIncorrect').addClass("hidden");
     $('#commentError').addClass("hidden");
+    $('#errorExists').addClass("hidden");
     var errorExists = false;
     var name = $('#name').val();
     var email = $('#email').val();
     var comment = $('#comment').val();
 
-    // if(name == ""){
-    //     $('#nameError').removeClass("hidden");
-    //     errorExists = true;
-    // }
-    // if(email == ""){
-    //     $('#emailError').removeClass("hidden");
-    //     errorExists = true;
-    // }
-    // if(comment == ""){
-    //     $('#commentError').removeClass("hidden");
-    //     errorExists = true;
-    // }
 
-    // if(errorExists){
-    //     return;
-    // }
+    if(name == ""){
+        $('#nameError').removeClass("hidden");
+        errorExists = true;
+    }
+    if(email == ""){
+        $('#emailError').removeClass("hidden");
+        errorExists = true;
+    }
+    if(comment == ""){
+        $('#commentError').removeClass("hidden");
+        errorExists = true;
+    }
+
+    if(errorExists){
+        $('#errorExists').removeClass("hidden");
+        return;
+    }
     //alert(name + " " + phone + " " + comment); return;
 
     $.ajax({
@@ -96,41 +100,43 @@ $(document).on('click', '#btnSubmitComment', function(e){
             jsonObject = JSON.parse(data);
             console.log(jsonObject);
 
+            if(jsonObject.hasOwnProperty("error")){
+                $('#emailIncorrect').removeClass("hidden");
+                $('#errorExists').removeClass("hidden");
+                return;
+            }
+
             var html = "";
 
-          //  if($.isEmptyObject(data.error)){
-                $("#commentModal").modal('hide');
+            $("#commentModal").modal('hide');
+            $('#name').val("");
+            $('#email').val("");
+            $('#comment').val("");
+            for(var i = Object.keys(jsonObject).length - 1; i >= 0 ; i-- ){
+                html += "<div class='row'>";
+                html += "<div class='col-md-12'>";
+                html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
+                html += "</div>";//col
+                html += "</div>";//row
 
-//alert(data);
-                for(var i = Object.keys(jsonObject).length - 1; i >= 0 ; i-- ){
-                    html += "<div class='row'>";
-                    html += "<div class='col-md-12'>";
-                    html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
-                    html += "</div>";//col
-                    html += "</div>";//row
+                html += "<div class='row'>";
+                html += "<div class='col-md-12 text-muted'>";
+                html += jsonObject[i].date_persian ;
+                html += "</div>";//col
+                html += "</div>";//row
 
-                    html += "<div class='row'>";
-                    html += "<div class='col-md-12 text-muted'>";
-                    html += jsonObject[i].date_persian ;
-                    html += "</div>";//col
-                    html += "</div>";//row
+                html += "<div class='row'>";
+                html += "<div class='col-md-12'>";
+                html += jsonObject[i].comment;
+                html += "</div>";//col
+                html += "</div>";//row
 
-                    html += "<div class='row'>";
-                    html += "<div class='col-md-12'>";
-                    html += jsonObject[i].comment;
-                    html += "</div>";//col
-                    html += "</div>";//row
+                html += "<hr/>";
 
-                    html += "<hr/>";
+            }
 
-                }
+            $("#comments").html(html);
 
-                $("#comments").html(html);
-            // }
-            // else{
-            //     alert("came here");
-            //     alert(data.error);
-            // }
 
         },
         error:function(error){ }

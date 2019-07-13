@@ -16,8 +16,8 @@
     <link id="css-preset" href={{asset('css/presets/employer.css')}} rel="stylesheet">
     <link href={{asset("css/responsive.css")}} rel="stylesheet">
     <link rel='stylesheet' href={{asset('css/bootstrap-rtl.min.css')}}>
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
-
+<!--     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
+ -->
     <style type="text/css">
       
       body{
@@ -263,14 +263,14 @@
                 <ul class="address">
 <!--                   <li><i class="fa fa-map-marker"></i> <span> آدرس:</span>خیابان جمهوری, نرسیده به بهارستان, خیابان ملت, پلاک ۱۰, زنگ ۳</li>
  -->
-                  <li><i class="fa fa-map-marker"></i> <span> آدرس:</span>ولی  عصر, خیابان کاج آبادی, پلاک ۷۲, زنگ ۱,  کد پستی ۱۹۶۶۹۱۳۶۶۱</li>
+<!--                   <li><i class="fa fa-map-marker"></i> <span> آدرس:</span>ولی  عصر, خیابان کاج آبادی, پلاک ۷۲, زنگ ۱,  کد پستی ۱۹۶۶۹۱۳۶۶۱</li>
                   <li><i class="fa fa-phone"></i> <span> تلفن:</span> ۹۴۸۶ ۲۲۰۵ ۲۱ ۹۸+</li>
-                  <li><i class="fa fa-envelope"></i> <span>ایمیل: </span>info@karjib.com</li>
+                  <li><i class="fa fa-envelope"></i> <span>ایمیل: </span>info@karjib.com</li> -->
                 </ul>
         </div>
       </div>
     </div>
-    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+<!--     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
         <div class="footer-logo">
           <img id='jxlzesgtnbqewlaoapfuoeukoeuk' style='cursor:pointer' onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=1024588&p=rfthobpduiwkaodsdshwmcsimcsi", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt='logo-samandehi' src='https://logo.samandehi.ir/logo.aspx?id=1024588&p=nbpdlymaodrfshwlujynaqgwaqgw'/>
@@ -278,7 +278,7 @@
           <img src="images/ecunion.png" alt="" onclick="window.open('https://ecunion.ir/verify/karjib.com?token=35352085c640cb744c15', 'Popup','toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30')" style="cursor:pointer">
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="footer-bottom">
 
       <div class="container">
