@@ -59,6 +59,80 @@ $(document).on('click', '.preventDefault', function(e)
     e.preventDefault();
 });
 
+$(document).on('change', '#selectOrder', function(e){
+
+    e.preventDefault();
+    var order = $("#selectOrder").val();
+
+    $.ajax({
+        method: "GET",
+        url: "/comments/getAll",
+        data: {order:order},
+        // data: $('#associatePersonalityWithFilmForm').serialize(),
+        success:function(data){
+            jsonObject = JSON.parse(data);
+            console.log(jsonObject);
+            var html = "";
+
+            if(order == 0){
+                for(var i = Object.keys(jsonObject).length - 1; i >= 0 ; i-- ){
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12'>";
+                    html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12 text-muted'>";
+                    html += jsonObject[i].date_persian ;
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12'>";
+                    html += jsonObject[i].comment;
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<hr/>";
+
+                }               
+            }
+
+            if(order == 1){
+                for(var i = 0; i <= Object.keys(jsonObject).length - 1 ; i++ ){
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12'>";
+                    html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12 text-muted'>";
+                    html += jsonObject[i].date_persian ;
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<div class='row'>";
+                    html += "<div class='col-md-12'>";
+                    html += jsonObject[i].comment;
+                    html += "</div>";//col
+                    html += "</div>";//row
+
+                    html += "<hr/>";
+
+                }               
+            }
+
+            $("#comments").html(html);
+        },
+        error:function(error){ }
+    })
+
+
+});
+
+
 $(document).on('click', '.btnSubmitComment', function(e){
 
     e.preventDefault();
@@ -76,14 +150,13 @@ $(document).on('click', '.btnSubmitComment', function(e){
     var email = $('#email').val();
     var comment = $('#comment').val();
     if(this.id == "btnSubmitComment"){
-        name = $('#nameModal').val();
+        name = $('#name').val();
         comment = $('#comment').val();
     }
     else if(this.id == "btnSubmitCommentModal"){
         name = $('#nameModal').val();
-        comment = $('#comment').val();
+        comment = $('#commentModal').val();
     }
-    return;
 
 
     if(name == ""){
@@ -116,12 +189,11 @@ $(document).on('click', '.btnSubmitComment', function(e){
             
         return;
     }
-    //alert(name + " " + phone + " " + comment); return;
 
     $.ajax({
         method: "GET",
         url: "/comments/store",
-        data: {name:name, email:email, comment:comment},
+        data: {name:name, comment:comment},
         // data: $('#associatePersonalityWithFilmForm').serialize(),
         success:function(data){
             jsonObject = JSON.parse(data);
@@ -135,10 +207,11 @@ $(document).on('click', '.btnSubmitComment', function(e){
 
             var html = "";
 
-            $("#commentModal").modal('hide');
+            $("#addCommentModal").modal('hide');
             $('#name').val("");
-            $('#email').val("");
             $('#comment').val("");
+            $('#nameModal').val("");
+            $('#commentModal').val("");
             for(var i = Object.keys(jsonObject).length - 1; i >= 0 ; i-- ){
                 html += "<div class='row'>";
                 html += "<div class='col-md-12'>";

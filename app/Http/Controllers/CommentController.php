@@ -64,12 +64,20 @@ class CommentController extends Controller
 //         }
 
         $datePersian = getPersianDateWithMonthName(date("Y", time())."-".date("m", time())."-".date("d", time()));
-        $insert = Comment::create(['name'=>$request->name, 'email'=>$request->email, 'comment'=>$request->comment, "date_persian"=>$datePersian]);
+        $insert = Comment::create(['name'=>$request->name, 'email'=>"email", 'comment'=>$request->comment, "date_persian"=>$datePersian]);
 
-        $comments = Comment::all()->reverse();
+        $comments = Comment::all();
 
         return json_encode($comments);
 
+
+    }
+
+    public function getAll(Request $request){
+
+        $comments = Comment::all();
+
+        return json_encode($comments);
 
     }
 

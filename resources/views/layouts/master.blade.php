@@ -294,8 +294,8 @@
   <div id="stickyBtns" class="container-fluid">
     <div id='addCommentBtn' class="row hidden">
 
-      <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-        <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#commentModal">نظر خود را بنویسید</button>
+      <div class="col-xs-12 col-md-4 col-md-offset-4 text-center visible-xs-block">
+        <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#addCommentModal">نظر خود را بنویسید</button>
 
       </div>
 
