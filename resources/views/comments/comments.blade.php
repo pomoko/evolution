@@ -25,11 +25,11 @@
                   {!! Form::label('name', 'نام:') !!} 
                     <span id='nameError' class="fa fa-times-circle text-danger hidden"> لطفا نام خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::text('نام', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
+                  {!! Form::text('نام', null, ['id'=>'nameModal', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
-          <div class="row">
+<!--           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('email', 'ایمیل:') !!} 
@@ -37,22 +37,22 @@
                     <span id='emailIncorrect' class="fa fa-times-circle text-danger hidden"> ایمیل اشتباه است</span>
                   {!! Form::text('نام', null, ['id'=>'email', 'class'=>'form-control', 'placeholder'=>'ایمیل شما','autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
-            </div><!--col-->
-          </div><!--row-->
+            </div>
+          </div> -->
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                   {!! Form::label('comment', 'نظر شما:') !!} 
                     <span id='commentError' class="fa fa-times-circle text-danger hidden"> لطفا نظرات خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::textarea('نظر شما', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
+                  {!! Form::textarea('نظر شما', null, ['id'=>'commentModal',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
           <div class="row">
               <div class="col-md-12 col-sm-12">
                   <div class="form-group">   
-                      {!! Form::button('ارسال', ['type'=>'submit','id'=>'btnSubmitComment', 'class'=>'btn btn-primary btn-md']) !!}
+                      {!! Form::button('ارسال', ['type'=>'submit','id'=>'btnSubmitCommentModal', 'class'=>'btnSubmitComment btn btn-primary btn-md']) !!}
                       <span id='errorExists' class="fa fa-times-circle text-danger hidden"> لطفا زمینه های نشان داده شده را تکمیل کنید</span>            
 
                   </div>
@@ -73,6 +73,66 @@
   </div><!--message modal-->
   <section id="commentsSection">
     <div class="container">
+      <div class="row hidden-xs">
+        <div class="col-md-12">
+            should hide
+        </div>
+      </div><!--row-->
+      <hr/>      
+      <div class="row hidden-xs">
+        <div class="col-md-1">
+            <span class="fa fa-user-circle fa-3x"></span>
+        </div>
+        <div class="col-md-11">
+          {!! Form::open(array('url'=>'/comments/store', 'id'=>'commentForm')) !!}
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                    {!! Form::label('name', 'نام:') !!} 
+                      <span id='nameError' class="fa fa-times-circle text-danger hidden"> لطفا نام خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                
+                    {!! Form::text('نام', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
+                </div>
+              </div><!--col-->
+            </div><!--row-->
+            <!-- <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                    {!! Form::label('email', 'ایمیل:') !!} 
+                      <span id='emailError' class="fa fa-times-circle text-danger hidden"> لطفا آدرس ایمیل خود را وارد کنید</span>
+                      <span id='emailIncorrect' class="fa fa-times-circle text-danger hidden"> ایمیل اشتباه است</span>
+                    {!! Form::text('نام', null, ['id'=>'email', 'class'=>'form-control', 'placeholder'=>'ایمیل شما','autocomplete'=>'off', 'required'=>'required']) !!}
+                </div>
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                    {!! Form::label('comment', 'نظر شما:') !!} 
+                      <span id='commentError' class="fa fa-times-circle text-danger hidden"> لطفا نظرات خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                
+                    {!! Form::textarea('نظر شما', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' => 2, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
+                </div>
+              </div><!--col-->
+            </div><!--row-->
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">   
+                        {!! Form::button('ارسال نظر', ['type'=>'submit','id'=>'btnSubmitComment', 'class'=>'btnSubmitComment btn btn-primary btn-md']) !!}
+                        <span id='errorExists' class="fa fa-times-circle text-danger hidden"> لطفا زمینه های نشان داده شده را تکمیل کنید</span>            
+
+                    </div>
+                </div>              
+
+
+            </div>
+
+
+          {!! Form::close() !!}
+        </div>
+      </div><!--row-->
+      <hr/>
       <div class="row">
         <div class="text-center col-sm-8 col-sm-offset-2">
           <h2>نظرات خوانندگان</h2>

@@ -203,15 +203,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand hidden" href="/">
             <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
           </a>                    
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll "><a href="/"><i class="fa fa-home"></i></a></li>
+            <li class="scroll "><a href="/">صفحه اول</i></a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">اطلاعات کتاب<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">درباره کتاب<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/info/preface">مقدمه</a></li>
                 <li><a href="/info/contents">فهرست</a></li>
@@ -219,7 +219,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">نقدها<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">نقد کتاب<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="scroll"><a href="#">a</a></li>
                 <li class="scroll"><a href="#">b</a></li>

@@ -59,34 +59,61 @@ $(document).on('click', '.preventDefault', function(e)
     e.preventDefault();
 });
 
-$(document).on('click', '#btnSubmitComment', function(e){
+$(document).on('click', '.btnSubmitComment', function(e){
+
     e.preventDefault();
+
+
     $('#nameError').addClass("hidden");
-    $('#emailError').addClass("hidden");
-    $('#emailIncorrect').addClass("hidden");
     $('#commentError').addClass("hidden");
     $('#errorExists').addClass("hidden");
+
+    $('#nameErrorModal').addClass("hidden");
+    $('#commentErrorModal').addClass("hidden");
+    $('#errorExistsModal').addClass("hidden");
     var errorExists = false;
     var name = $('#name').val();
     var email = $('#email').val();
     var comment = $('#comment').val();
+    if(this.id == "btnSubmitComment"){
+        name = $('#nameModal').val();
+        comment = $('#comment').val();
+    }
+    else if(this.id == "btnSubmitCommentModal"){
+        name = $('#nameModal').val();
+        comment = $('#comment').val();
+    }
+    return;
 
 
     if(name == ""){
-        $('#nameError').removeClass("hidden");
+        if(this.id == "btnSubmitComment"){
+            $('#nameError').removeClass("hidden");
+        }
+        else if(this.id == "btnSubmitCommentModal"){
+            $('#nameErrorModal').removeClass("hidden");
+        }
         errorExists = true;
     }
-    if(email == ""){
-        $('#emailError').removeClass("hidden");
-        errorExists = true;
-    }
+
     if(comment == ""){
-        $('#commentError').removeClass("hidden");
+        if(this.id == "btnSubmitComment"){
+            $('#commentError').removeClass("hidden");
+        }
+        else if(this.id == "btnSubmitCommentModal"){
+            $('#commentErrorModal').removeClass("hidden");
+        }
         errorExists = true;
     }
 
     if(errorExists){
-        $('#errorExists').removeClass("hidden");
+        if(this.id == "btnSubmitComment"){
+            $('#errorExists').removeClass("hidden");
+        }
+        else if(this.id == "btnSubmitCommentModal"){
+            $('#errorExistsModal').removeClass("hidden");
+        }
+            
         return;
     }
     //alert(name + " " + phone + " " + comment); return;

@@ -50,18 +50,18 @@ class CommentController extends Controller
     {
 
         $response["success"] = false;
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'comment' => 'required',
-        ]);
+//         $validator = Validator::make($request->all(), [
+//             'name' => 'required',
+//             'email' => 'required|email',
+//             'comment' => 'required',
+//         ]);
 
-        if ($validator->fails()) {
-//            return response()->json(['errors'=>$validator->errors()->all()]);
-            //return json_encode(['errors'=>$validator->errors()->all()]);
-            return json_encode(['error'=>"true"]);
-            //return withErrors($validator)->withInput();
-        }
+//         if ($validator->fails()) {
+// //            return response()->json(['errors'=>$validator->errors()->all()]);
+//             //return json_encode(['errors'=>$validator->errors()->all()]);
+//             return json_encode(['error'=>"true"]);
+//             //return withErrors($validator)->withInput();
+//         }
 
         $datePersian = getPersianDateWithMonthName(date("Y", time())."-".date("m", time())."-".date("d", time()));
         $insert = Comment::create(['name'=>$request->name, 'email'=>$request->email, 'comment'=>$request->comment, "date_persian"=>$datePersian]);
