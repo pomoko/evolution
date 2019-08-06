@@ -54,7 +54,16 @@ a:hover, a:focus {
 	border-color: #a283d9 transparent transparent;
 }
 
-.social-icons-container {
+.social-icons-container-en {
+  position: fixed;
+  top: 140px;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.social-icons-container-fa {
   position: fixed;
   top: 140px;
   right:20px;
@@ -63,7 +72,7 @@ a:hover, a:focus {
   transform: translateY(-50%);
 }
 
-.social-icons-container a {
+.social-icons-container-en a, .social-icons-container-fa a {
   display: block;
   text-align: center;
   padding: 8px;
@@ -72,28 +81,42 @@ a:hover, a:focus {
   font-size: 20px;
 }
 
-.social-icons-container a:hover {
+.social-icons-container-en a:hover, .social-icons-container-fa a:hover {
   background-color: #000;
 }
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
-	.social-icons-container {
+	.social-icons-container-fa {
 	  position: fixed;
 	  top: ;
 	  right:unset;
 	  left:0%;
 
 	}
+  .social-icons-container-en {
+    position: fixed;
+    top: ;
+    left:unset;
+    right:0%;
+
+  }
 }
 
 @media (max-width: 767px) {
-	.social-icons-container {
+	.social-icons-container-fa {
 	  position: fixed;
 	  top: 110px;
 	  right:unset;
 	  left:0%;
 
 	}
+  .social-icons-container-en {
+    position: fixed;
+    top: 110px;
+    left:unset;
+    right:0%;
+
+  }
 }
 
 .facebook {

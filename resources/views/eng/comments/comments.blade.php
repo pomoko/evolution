@@ -1,9 +1,9 @@
-@extends('layouts.master')
+@extends('layouts.masterEng')
 @section('title', 'نظرات خوانندگان')
 
 @section('content')
 
-  <div id="lang" class="hidden">fa</div>
+  <div id="lang" class="hidden">en</div>
   <div id="commentsPage"></div>
   <!-- Message Modal -->
   <div class="modal fade" id="addCommentModal" tabindex="-1" role="dialog" aria-labelledby="addCommentModalLabel" aria-hidden="true">
@@ -22,10 +22,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                  {!! Form::label('name', 'نام:') !!} 
-                    <span id='nameErrorModal' class="fa fa-times-circle text-danger hidden"> لطفا نام خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                  {!! Form::label('name', 'name:') !!} 
+                    <span id='nameErrorModal' class="fa fa-times-circle text-danger hidden"> Please Enter Your Name</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::text('نام', null, ['id'=>'nameModal', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
+                  {!! Form::text('name', null, ['id'=>'nameModal', 'class'=>'form-control', 'placeholder'=>'Your Name', 'autocomplete'=>'off', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
@@ -42,18 +42,18 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                  {!! Form::label('comment', 'نظر شما:') !!} 
-                    <span id='commentErrorModal' class="fa fa-times-circle text-danger hidden"> لطفا نظرات خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                  {!! Form::label('comment', 'Your Comments:') !!} 
+                    <span id='commentErrorModal' class="fa fa-times-circle text-danger hidden"> Please Enter Your Comments</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::textarea('نظر شما', null, ['id'=>'commentModal',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
+                  {!! Form::textarea('Your Comments', null, ['id'=>'commentModal',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'Your Comments','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
           <div class="row">
               <div class="col-md-12 col-sm-12">
                   <div class="form-group">   
-                      {!! Form::button('ارسال', ['type'=>'submit','id'=>'btnSubmitCommentModal', 'class'=>'btnSubmitComment btn btn-primary btn-md']) !!}
-                      <span id='errorExistsModal' class="fa fa-times-circle text-danger hidden"> لطفا زمینه های نشان داده شده را تکمیل کنید</span>            
+                      {!! Form::button('Submit', ['type'=>'submit','id'=>'btnSubmitCommentModal', 'class'=>'btnSubmitComment btn btn-primary btn-md']) !!}
+                      <span id='errorExistsModal' class="fa fa-times-circle text-danger hidden"> Please Fill Out All Fields</span>            
 
                   </div>
               </div>              
@@ -66,7 +66,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" id="btnCancelMessage" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+          <button type="button" id="btnCancelMessage" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
@@ -83,10 +83,10 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('name', 'نام:') !!} 
-                      <span id='nameError' class="fa fa-times-circle text-danger hidden"> لطفا نام خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    {!! Form::label('name', 'Name:') !!} 
+                      <span id='nameError' class="fa fa-times-circle text-danger hidden"> Please Enter Your Name</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
                 
-                    {!! Form::text('نام', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'نام شما', 'autocomplete'=>'off', 'required'=>'required']) !!}
+                    {!! Form::text('name', null, ['id'=>'name', 'class'=>'form-control', 'placeholder'=>'Your Name', 'autocomplete'=>'off', 'required'=>'required']) !!}
                 </div>
               </div><!--col-->
             </div><!--row-->
@@ -103,18 +103,18 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('comment', 'نظر شما:') !!} 
-                      <span id='commentError' class="fa fa-times-circle text-danger hidden"> لطفا نظرات خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+                    {!! Form::label('comment', 'Your Comments:') !!} 
+                      <span id='commentError' class="fa fa-times-circle text-danger hidden"> Please Enter Your Comments</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
                 
-                    {!! Form::textarea('نظر شما', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' => 2, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
+                    {!! Form::textarea('Your Comments', null, ['id'=>'comment',  'class'=>'form-control', 'cols' => 20, 'rows' => 2, 'maxlength'=>900, 'placeholder'=>'Your Comments','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
                 </div>
               </div><!--col-->
             </div><!--row-->
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="form-group">   
-                        {!! Form::button('ارسال نظر', ['type'=>'submit','id'=>'btnSubmitComment', 'class'=>'btnSubmitComment btn btn-primary btn-md']) !!}
-                        <span id='errorExists' class="fa fa-times-circle text-danger hidden"> لطفا زمینه های نشان داده شده را تکمیل کنید</span>            
+                        {!! Form::button('Submit Comments', ['type'=>'submit','id'=>'btnSubmitComment', 'class'=>'btnSubmitComment btn btn-primary btn-md']) !!}
+                        <span id='errorExists' class="fa fa-times-circle text-danger hidden"> Please Fill Out All Fields</span>            
 
                     </div>
                 </div>              
@@ -129,14 +129,14 @@
       <hr/>
       <div class="row">
         <div class="col-xs-5 col-sm-9">
-          <h3>همه نظرات <span id="numComments">({{convertNumberToPersian(count($comments))}})</span></h3>
+          <h3>All Comments <span id="numComments">({{count($comments)}})</span></h3>
         </div>
         <div class="col-xs-7 col-sm-3 text-left">
           <form>
             <div class="form-group text-left">
               <select id="selectOrder" class="form-control">
-                <option value="0">ترتیب نمایش از تازه ترین ها</option>
-                <option value="1">ترتیب نمایش از قدیمی ترین ها</option>
+                <option value="0">Display From Latest</option>
+                <option value="1">Display From Earliest</option>
               </select>
             </div>
           </form>
@@ -152,7 +152,7 @@
           </div>
           <div class="row">
             <div class="col-md-12 text-muted">
-              {{$comment->date_persian}}
+              {{date("M. j, Y", strtotime($comment->created_at))}}
               
             </div>
           </div>

@@ -14,6 +14,10 @@
 		font-size: 12px;
 		padding-right: 10px;
 	}
+	 .navbar-left li a {
+		font-size: 12px;
+		padding-right: 10px;
+	}
 	.social-icons ul li {
 		margin-bottom: 10px;
 	}
@@ -71,10 +75,25 @@
 	  border:1px solid #fff;
 	}
 
+	.toggle-left{
+		margin-left: 15px !important;
+		float: left !important;
+	}
+
+	.toggle-right{
+		margin-right: 15px !important;
+		float: right !important;
+	}
+
 	.navbar-toggle .icon-bar {
 	  background-color: #fff;
 	}
 	.navbar-right li a {
+		font-size: 13px;
+		padding-bottom: 8px;
+		padding-top: 10px;
+	}
+	.navbar-left li a {
 		font-size: 13px;
 		padding-bottom: 8px;
 		padding-top: 10px;

@@ -14,13 +14,27 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/eng', function () {
+    return view('eng.index');
+});
 
 Auth::routes();
 
 Route::get('/info/preface', 'HomeController@preface');
 Route::get('/info/contents', 'HomeController@contents');
 Route::get('/info/articles', 'HomeController@articles');
+Route::get('/info/bookInfo', 'HomeController@bookInfo');
 
 Route::get('/comments', 'CommentController@index');
 Route::get('/comments/store', 'CommentController@store');
 Route::get('/comments/getAll', 'CommentController@getAll');
+
+//english
+Route::get('/eng/info/preface', 'HomeController@prefaceEng');
+Route::get('/eng/info/contents', 'HomeController@contentsEng');
+Route::get('/eng/info/articles', 'HomeController@articlesEng');
+Route::get('/eng/info/bookInfo', 'HomeController@bookInfoEng');
+
+Route::get('/eng/comments', 'CommentController@indexEng');
+Route::get('/eng/comments/store', 'CommentController@store');
+Route::get('/eng/comments/getAll', 'CommentController@getAll');

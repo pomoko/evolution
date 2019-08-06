@@ -30,6 +30,14 @@ class CommentController extends Controller
 
     }
 
+    public function indexEng()
+    {
+        //
+        $comments = Comment::all()->reverse();
+        return view('eng/comments/comments', compact('comments'));
+        
+
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -15,7 +15,6 @@
     <link href={{asset("css/main.css")}} rel="stylesheet">
     <link id="css-preset" href={{asset('css/presets/employer.css')}} rel="stylesheet">
     <link href={{asset("css/responsive.css")}} rel="stylesheet">
-    <link rel='stylesheet' href={{asset('css/bootstrap-rtl.min.css')}}>
 <!--     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
  -->
     <style type="text/css">
@@ -52,7 +51,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">درگاه خرید را  انتخاب کنید</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Select Desired Method of Purchase</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -60,10 +59,10 @@
         <div class="modal-body">
           <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action active">
-              داخل ایران
+              In Iran
             </a>
-            <a href="#" class="list-group-item list-group-item-action">کتاب فروشی ها</a>
-            <a href="#" class="list-group-item list-group-item-action">خرید اینترنتی</a>
+            <a href="#" class="list-group-item list-group-item-action">Bookstores</a>
+            <a href="#" class="list-group-item list-group-item-action">Internet Shopping</a>
           </div>
 
           <hr/>
@@ -71,7 +70,7 @@
 
           <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action active">
-              سایر کشورها
+              Other Countries
             </a>
             <a href="#" class="list-group-item list-group-item-action">A</a>
             <a href="#" class="list-group-item list-group-item-action">B</a>
@@ -79,7 +78,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" id="btnCancelMessage" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+          <button type="button" id="btnCancelMessage" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
@@ -151,14 +150,14 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">پیغام شما ارسال گردید.</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Message Delivered Successfully</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary submitEmail" data-dismiss="modal">تایید</button>
+          <button type="button" class="btn btn-primary submitEmail" data-dismiss="modal">OK</button>
         </div>
       </div>
     </div>
@@ -197,7 +196,7 @@
     <div class="main-nav">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle toggle-right" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle toggle-left" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -208,28 +207,28 @@
           </a>                    
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll "><a href="/">صفحه اول</i></a></li>
+          <ul class="nav navbar-nav navbar-left">                 
+            <li class="scroll "><a href="/eng">Home</i></a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">درباره کتاب<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">About The Book<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/info/bookInfo">اطلاعات کتاب</a></li>
-                <li><a href="/info/preface">مقدمه کتاب</a></li>
-                <li><a href="/info/contents">فهرست کتاب</a></li>
-                <li><a href="/info/articles">نمونه مقالات</a></li>
+                <li><a href="/eng/info/bookInfo">Book Info</a></li>
+                <li><a href="/eng/info/preface">Preface</a></li>
+                <li><a href="/eng/info/contents">Table of Contents</a></li>
+                <li><a href="/eng/info/articles">Sample Articles</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">نقد کتاب<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reviews<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="scroll"><a href="#">a</a></li>
                 <li class="scroll"><a href="#">b</a></li>
                 <li class="scroll"><a href="#">c</a></li>
               </ul>
             </li>            
-            <li class="scroll"><a href="/comments">نظرات خوانندگان</a></li>  
-            <li class="scroll"><a href="#pricing">تماس با نویسنده</a></li>
-            <li class="scroll"><a href="/eng">English</a></li>
+            <li class="scroll"><a href="/eng/comments">Readers' Comments</a></li>  
+            <li class="scroll"><a href="#pricing">Contact Author</a></li>
+            <li class="scroll"><a href="/">فارسی</a></li>
 <!--             <li class="scroll"><a href="#portfolio">برخی از کارفرمایان</a></li>  -->
 <!--             <li class="scroll"><a href="#blog">Blog</a></li> -->
 
@@ -241,7 +240,7 @@
 
   <body>
     <!--sticky social icons-->
-    <div class="social-icons-container-fa">
+    <div class="social-icons-container-en">
       <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
       <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
       <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
@@ -297,7 +296,7 @@
     <div id='addCommentBtn' class="row hidden">
 
       <div class="col-xs-12 col-md-4 col-md-offset-4 text-center visible-xs-block">
-        <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#addCommentModal">نظر خود را بنویسید</button>
+        <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#addCommentModal">Write Your Comments</button>
 
       </div>
 
@@ -305,7 +304,7 @@
     <div class="row">
 
       <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-        <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">خرید کتاب</button>
+        <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">Buy Book</button>
 
       </div>
 
