@@ -63,6 +63,11 @@ $(document).on('change', '#selectOrder', function(e){
 
     e.preventDefault();
     var order = $("#selectOrder").val();
+    var isFa = true;
+    if($("#lang").html() == "en"){
+        isFa = false;
+    }
+
 
     $.ajax({
         method: "GET",
@@ -80,6 +85,14 @@ $(document).on('change', '#selectOrder', function(e){
                         // var d = new Date(jsonObject[i].created_at);
                         // alert(d.getMonth());
                     //}
+                    var commentDate = "";
+                    if(isFa){
+                        commentDate = jsonObject[i].date_persian;
+                    }
+                    else{
+                        var currentDate = new Date(jsonObject[i].created_at)
+                        commentDate = convertGregorianMonthNumToName(currentDate.getMonth() + 1) + " " + currentDate.getDate() + ", " + currentDate.getFullYear();
+                    }
                     html += "<div class='row'>";
                     html += "<div class='col-md-12'>";
                     html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
@@ -88,7 +101,7 @@ $(document).on('change', '#selectOrder', function(e){
 
                     html += "<div class='row'>";
                     html += "<div class='col-md-12 text-muted'>";
-                    html += jsonObject[i].date_persian ;
+                    html += commentDate;
                     html += "</div>";//col
                     html += "</div>";//row
 
@@ -105,6 +118,15 @@ $(document).on('change', '#selectOrder', function(e){
 
             if(order == 1){
                 for(var i = 0; i <= Object.keys(jsonObject).length - 1 ; i++ ){
+                    var commentDate = "";
+                    if(isFa){
+                        commentDate = jsonObject[i].date_persian;
+                    }
+                    else{
+                        var currentDate = new Date(jsonObject[i].created_at)
+                        //alert(convertGregorianMonthNumToName(currentDate.getMonth() + 1));
+                        commentDate = convertGregorianMonthNumToName(currentDate.getMonth() + 1) + " " + currentDate.getDate() + ", " + currentDate.getFullYear();
+                    }
                     html += "<div class='row'>";
                     html += "<div class='col-md-12'>";
                     html += "<h4><strong>" + jsonObject[i].name + "</strong></h4>";
@@ -113,7 +135,7 @@ $(document).on('change', '#selectOrder', function(e){
 
                     html += "<div class='row'>";
                     html += "<div class='col-md-12 text-muted'>";
-                    html += jsonObject[i].date_persian ;
+                    html += commentDate;
                     html += "</div>";//col
                     html += "</div>";//row
 
@@ -314,7 +336,55 @@ function convertNumberToPersian(numberLatin){
     }
     return numberPersian;
 }
+function convertGregorianMonthNumToName(monthNum){
+    var monthName = '';
+    //loop through each number in the string
+    switch(monthNum)
+    {     
+ 
+        case 1:
+            monthName =  "Jan.";
+            break;
+        case 3:
+            monthName =  "Feb.";
+            break;
+        case 3:
+            monthName = "Mar.";
+            break;
+        case 4:
+            monthName = "Apr.";
+            break;
+        case 5:
+            monthName = "May.";
+            break;
+        case 6:
+            monthName = "Jun.";
+            break;
+        case 7:
+            monthName = "Jul.";
+            break;
+        case 8:
+            monthName = "Aug.";
+            break;
+        case 9:
+            monthName = "Sep.";
+            break;
+        case 10:
+            monthName = "Oct.";
+            break;
+        case 11:
+            monthName = "Nov.";
+            break;
+        case 12:
+            monthName = "Dec.";
+            break;
+        default:
+            monthName = "";
+            break;
 
+    }
+    return monthName;
+}
 
 
 
