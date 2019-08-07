@@ -16,8 +16,8 @@
     <link id="css-preset" href={{asset('css/presets/employer.css')}} rel="stylesheet">
     <link href={{asset("css/responsive.css")}} rel="stylesheet">
     <link rel='stylesheet' href={{asset('css/bootstrap-rtl.min.css')}}>
-<!--     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
- -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
+
     <style type="text/css">
       
       body{
