@@ -19,9 +19,13 @@
 <!--     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
  -->
     <style type="text/css">
+      @font-face {
+        font-family: "irsans";
+        src: url({{asset('fonts/irsans.ttf')}});
+      }
       
       body{
-           font-family: 'IranianSansRegular'; 
+           font-family: 'irsans'; 
           font-weight: normal; 
      font-style: normal;
       }

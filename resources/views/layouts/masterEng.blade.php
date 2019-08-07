@@ -17,12 +17,17 @@
     <link href={{asset("css/responsive.css")}} rel="stylesheet">
 <!--     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
  -->
+      
     <style type="text/css">
+      @font-face {
+        font-family: "irsans";
+        src: url({{asset('fonts/irsans.ttf')}});
+      }
       
       body{
-           font-family: 'IranianSansRegular'; 
-          font-weight: normal; 
-     font-style: normal;
+        font-family: 'irsans'; 
+        font-weight: normal; 
+        font-style: normal;
       }
 
 
@@ -51,7 +56,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Select Desired Method of Purchase</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Select Method of Purchase</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
