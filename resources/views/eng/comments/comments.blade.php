@@ -135,8 +135,8 @@
           <form>
             <div class="form-group text-left">
               <select id="selectOrder" class="form-control">
-                <option value="0">Display From Latest</option>
-                <option value="1">Display From Earliest</option>
+                <option value="0">Sort From Newest</option>
+                <option value="1">Sort From Oldest</option>
               </select>
             </div>
           </form>

@@ -30,6 +30,10 @@ class HomeController extends Controller
         return view('eng.home');
     }    
 
+    public function contact()
+    {
+        return view('contact/contact');
+    }
     public function preface()
     {
         return view('info.preface.preface');

@@ -232,7 +232,7 @@
               </ul>
             </li>            
             <li class="scroll"><a href="/comments">نظرات خوانندگان</a></li>  
-            <li class="scroll"><a href="#pricing">تماس با نویسنده</a></li>
+            <li class="scroll"><a href="/contact">تماس با نویسنده</a></li>
             <li class="scroll"><a href="/eng">English</a></li>
 <!--             <li class="scroll"><a href="#portfolio">برخی از کارفرمایان</a></li>  -->
 <!--             <li class="scroll"><a href="#blog">Blog</a></li> -->
@@ -248,7 +248,7 @@
     <div class="social-icons-container-fa">
       <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
       <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
+      <a href="https://www.instagram.com/symphonyofevolutionbook/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a> 
     </div>
     
         <div class="container">

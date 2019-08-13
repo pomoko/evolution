@@ -275,6 +275,99 @@ $(document).on('click', '.btnSubmitComment', function(e){
 });
 
 
+$(document).on('click', '#btnSendMailDep', function(e){
+
+    e.preventDefault();
+
+    // $('#nameError').addClass("hidden");
+    // $('#commentError').addClass("hidden");
+    // $('#errorExists').addClass("hidden");
+
+    // $('#nameErrorModal').addClass("hidden");
+    // $('#commentErrorModal').addClass("hidden");
+    // $('#errorExistsModal').addClass("hidden");
+    // var errorExists = false;
+    // var name = $('#name').val();
+    // var email = $('#email').val();
+    // var comment = $('#comment').val();
+    // if(this.id == "btnSubmitComment"){
+    //     name = $('#name').val();
+    //     comment = $('#comment').val();
+    // }
+    // else if(this.id == "btnSubmitCommentModal"){
+    //     name = $('#nameModal').val();
+    //     comment = $('#commentModal').val();
+    // }
+
+
+    // if(name == ""){
+    //     if(this.id == "btnSubmitComment"){
+    //         $('#nameError').removeClass("hidden");
+    //     }
+    //     else if(this.id == "btnSubmitCommentModal"){
+    //         $('#nameErrorModal').removeClass("hidden");
+    //     }
+    //     errorExists = true;
+    // }
+
+    // if(comment == ""){
+    //     if(this.id == "btnSubmitComment"){
+    //         $('#commentError').removeClass("hidden");
+    //     }
+    //     else if(this.id == "btnSubmitCommentModal"){
+    //         $('#commentErrorModal').removeClass("hidden");
+    //     }
+    //     errorExists = true;
+    // }
+
+    // if(errorExists){
+    //     if(this.id == "btnSubmitComment"){
+    //         $('#errorExists').removeClass("hidden");
+    //     }
+    //     else if(this.id == "btnSubmitCommentModal"){
+    //         $('#errorExistsModal').removeClass("hidden");
+    //     }
+            
+    //     return;
+    // }
+
+alert("here");
+    var from = "from@gmail.com";
+    // var to = "info@symphonyofevolution.com";
+    var to = "p.khouzani@gmail.com";
+    var subject = "subject text";
+    var content = "messate text";
+    $.ajax({
+        method: "POST",
+        url: "/contact/sendMail",
+        data: {to:to, from:from, subject:subject, content:content},
+        // data: $('#associatePersonalityWithFilmForm').serialize(),
+        success:function(data){
+            jsonObject = JSON.parse(data);
+            console.log(jsonObject);
+
+            if(jsonObject.hasOwnProperty("error")){
+                $('#emailIncorrect').removeClass("hidden");
+                $('#errorExists').removeClass("hidden");
+                return;
+            }
+
+            // $("#addCommentModal").modal('hide');
+            // $('#name').val("");
+            // $('#comment').val("");
+            // $('#nameModal').val("");
+            // $('#commentModal').val("");
+
+
+
+        },
+        error:function(error){ }
+    })
+
+});
+
+
+
 $(document).on('click', '#btnProceedToPayment', function(e){
     alert("در حال حاضر تمای خدمات به صورت رایگان و بدون هیچ گونه تعهدی ارائه داده میشود")
 });

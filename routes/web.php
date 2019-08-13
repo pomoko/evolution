@@ -11,6 +11,10 @@
 |
 */
 
+use Illuminate\Http\Request;
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -19,6 +23,12 @@ Route::get('/eng', function () {
 });
 
 Auth::routes();
+
+Route::get('/contact', 'HomeController@contact');
+Route::post('/contact/sendMail', function(Request $request){
+	Mail::send(new SendMail($request));
+	redirect("/");
+});
 
 Route::get('/info/preface', 'HomeController@preface');
 Route::get('/info/contents', 'HomeController@contents');

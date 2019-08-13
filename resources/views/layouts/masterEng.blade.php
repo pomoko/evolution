@@ -215,7 +215,7 @@
           <ul class="nav navbar-nav navbar-left">                 
             <li class="scroll "><a href="/eng">Home</i></a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">About The Book<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Book Information<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/eng/info/bookInfo">Book Info</a></li>
                 <li><a href="/eng/info/preface">Preface</a></li>
@@ -224,7 +224,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reviews<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Book Reviews<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="scroll"><a href="#">a</a></li>
                 <li class="scroll"><a href="#">b</a></li>
@@ -232,7 +232,7 @@
               </ul>
             </li>            
             <li class="scroll"><a href="/eng/comments">Readers' Comments</a></li>  
-            <li class="scroll"><a href="#pricing">Contact Author</a></li>
+            <li class="scroll"><a href="#pricing">Direct To Author</a></li>
             <li class="scroll"><a href="/">فارسی</a></li>
 <!--             <li class="scroll"><a href="#portfolio">برخی از کارفرمایان</a></li>  -->
 <!--             <li class="scroll"><a href="#blog">Blog</a></li> -->
@@ -248,7 +248,7 @@
     <div class="social-icons-container-en">
       <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
       <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
+      <a href="https://www.instagram.com/symphonyofevolutionbook/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a> 
     </div>
     
         <div class="container">
@@ -309,7 +309,7 @@
     <div class="row">
 
       <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-        <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">Buy Book</button>
+        <button type="button" class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#buyModal">Buy Now</button>
 
       </div>
 
