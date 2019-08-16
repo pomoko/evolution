@@ -83,7 +83,7 @@ class HomeController extends Controller
 
          Mail::to("info@symphonyofevolution.com")->send(new SendMail($data));
 
-         //return back()->with('success', $successMsg);
+         return back()->with('success', $successMsg);
 
     }
     public function reviews()
