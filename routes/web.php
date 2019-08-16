@@ -25,15 +25,14 @@ Route::get('/eng', function () {
 Auth::routes();
 
 Route::get('/contact', 'HomeController@contact');
-Route::post('/contact/sendMail', function(Request $request){
-	Mail::send(new SendMail($request));
-	redirect("/");
-});
+Route::post('/contact/sendMail', "HomeController@sendMail");
 
 Route::get('/info/preface', 'HomeController@preface');
 Route::get('/info/contents', 'HomeController@contents');
 Route::get('/info/articles', 'HomeController@articles');
 Route::get('/info/bookInfo', 'HomeController@bookInfo');
+
+Route::get('/reviews', 'HomeController@reviews');
 
 Route::get('/comments', 'CommentController@index');
 Route::get('/comments/store', 'CommentController@store');
@@ -45,6 +44,7 @@ Route::get('/eng/info/contents', 'HomeController@contentsEng');
 Route::get('/eng/info/articles', 'HomeController@articlesEng');
 Route::get('/eng/info/bookInfo', 'HomeController@bookInfoEng');
 
+Route::get('/eng/contact', 'HomeController@contactEng');
 Route::get('/eng/comments', 'CommentController@indexEng');
 Route::get('/eng/comments/store', 'CommentController@store');
 Route::get('/eng/comments/getAll', 'CommentController@getAll');

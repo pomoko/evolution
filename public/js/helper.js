@@ -331,16 +331,17 @@ $(document).on('click', '#btnSendMailDep', function(e){
     //     return;
     // }
 
-alert("here");
-    var from = "from@gmail.com";
     // var to = "info@symphonyofevolution.com";
-    var to = "p.khouzani@gmail.com";
-    var subject = "subject text";
-    var content = "messate text";
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var subject = $('#subject').val();
+    var message = $('#message').val();
+    var file = $('#file').val();
+    alert(email);
     $.ajax({
         method: "POST",
         url: "/contact/sendMail",
-        data: {to:to, from:from, subject:subject, content:content},
+        data: {name:name, email:email, subject:subject, message:message, file:file},
         // data: $('#associatePersonalityWithFilmForm').serialize(),
         success:function(data){
             jsonObject = JSON.parse(data);

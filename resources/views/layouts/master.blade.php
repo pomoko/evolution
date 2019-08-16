@@ -223,14 +223,7 @@
                 <li><a href="/info/articles">نمونه مقالات</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">نقد کتاب<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="scroll"><a href="#">a</a></li>
-                <li class="scroll"><a href="#">b</a></li>
-                <li class="scroll"><a href="#">c</a></li>
-              </ul>
-            </li>            
+            <li class="scroll"><a href="/reviews">نقد کتاب</a></li>  
             <li class="scroll"><a href="/comments">نظرات خوانندگان</a></li>  
             <li class="scroll"><a href="/contact">تماس با نویسنده</a></li>
             <li class="scroll"><a href="/eng">English</a></li>

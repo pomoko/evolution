@@ -45,7 +45,7 @@
                   {!! Form::label('comment', 'Your Comments:') !!} 
                     <span id='commentErrorModal' class="fa fa-times-circle text-danger hidden"> Please Enter Your Comments</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::textarea('Your Comments', null, ['id'=>'commentModal',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'Your Comments','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
+                  {!! Form::textarea('Your Comments', null, ['id'=>'commentModal',  'class'=>'form-control comment', 'cols' => 20, 'rows' =>40, 'maxlength'=>3000, 'placeholder'=>'Your Comments','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->

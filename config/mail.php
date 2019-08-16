@@ -29,9 +29,7 @@ return [
     |
     */
 
-    // 'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-    'host' => env('MAIL_HOST', 'mailtrap.io'),
-
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -44,9 +42,7 @@ return [
     |
     */
 
-    // 'port' => env('MAIL_PORT', 587),
-    'port' => env('MAIL_PORT', 2525),
-
+    'port' => env('MAIL_PORT', 587),
 
     /*
     |--------------------------------------------------------------------------

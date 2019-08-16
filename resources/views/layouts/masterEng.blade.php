@@ -223,16 +223,9 @@
                 <li><a href="/eng/info/articles">Sample Articles</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Book Reviews<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="scroll"><a href="#">a</a></li>
-                <li class="scroll"><a href="#">b</a></li>
-                <li class="scroll"><a href="#">c</a></li>
-              </ul>
-            </li>            
+            <li class="scroll"><a href="/eng/reviews">Book Reviews</a></li>  
             <li class="scroll"><a href="/eng/comments">Readers' Comments</a></li>  
-            <li class="scroll"><a href="#pricing">Direct To Author</a></li>
+            <li class="scroll"><a href="/eng/contact">Contact Author</a></li>
             <li class="scroll"><a href="/">فارسی</a></li>
 <!--             <li class="scroll"><a href="#portfolio">برخی از کارفرمایان</a></li>  -->
 <!--             <li class="scroll"><a href="#blog">Blog</a></li> -->

@@ -13,16 +13,15 @@ class SendMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $email;
-
+    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct($data)
     {
-        $this->email = $request;
+        $this->data = $data;
     }
 
     /**
@@ -32,6 +31,17 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("new email")->from($this->email->email, $this->email->name)->to("p.khouzani@gmail.com")->view("contact.test");
+        if($this->data['file'] != null){
+            return $this->from($this->data['email'])->subject($this->data['subject'])->attach($this->data['file']->getRealPath(),
+                [
+                    'as' => $this->data['file']->getClientOriginalName(),
+                    'mime' => $this->data['file']->getClientMimeType(),
+                ])->view('contact.template')->with('data', $this->data);
+
+        }
+        else{
+            return $this->from($this->data['email'])->subject($this->data['subject'])->view('contact.template')->with('data', $this->data);
+        }
+
     }
 }

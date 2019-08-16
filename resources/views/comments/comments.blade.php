@@ -45,7 +45,7 @@
                   {!! Form::label('comment', 'نظر شما:') !!} 
                     <span id='commentErrorModal' class="fa fa-times-circle text-danger hidden"> لطفا نظرات خود را وارد کنید</span><!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
               
-                  {!! Form::textarea('نظر شما', null, ['id'=>'commentModal',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>900, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
+                  {!! Form::textarea('نظر شما', null, ['id'=>'commentModal',  'class'=>'form-control', 'cols' => 20, 'rows' =>10, 'maxlength'=>3000, 'placeholder'=>'نظر شما','autocomplete'=>'off', 'style'=>'resize:none', 'required'=>'required']) !!}
               </div>
             </div><!--col-->
           </div><!--row-->
