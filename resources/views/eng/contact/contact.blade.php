@@ -76,11 +76,9 @@
     <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 <!--                 <p>Please contact us for more information if you have any questions or inquiries.</p>
 -->    <ul class="address">
-        <li><i class="fa fa-map-marker"></i> Valve Industries Inc., 4 Slate Court D-2, Woodland Park, NJ, 07424 USA </li>
-        <li><i class="fa fa-phone"></i> +1 973-284-0222  </li>
-        <li><i class="fa fa-fax"></i> +1 973-320-8695 </li>
-        <li><i class="fa fa-envelope"></i><!--  <span> Email:</span> --><a href="mailto:someone@yoursite.com"> info@valveindustries.com</a></li>
-        <li><i class="fa fa-globe"></i> <a href="#">www.valveindustries.com</a></li>
+        <li><i class="fa fa-map-marker"></i> Mailbox Number..., Tehran, Iran</li>
+        <li><i class="fa fa-envelope"></i> <a href="mailto:info@symphonyofevolution.com"> info@symphonyofevolution.com</a></li>
+        <li><i class="fa fa-globe"></i> <a href="/eng">www.symphonyofevolution.com</a></li>
       </ul>
     </div>                            
   </div>

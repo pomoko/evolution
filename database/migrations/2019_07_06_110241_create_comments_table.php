@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone')->default("");
-            $table->string('comment', 1000);
+            $table->string('comment', 3500);
             $table->string('date_persian');
             $table->timestamps();
         });

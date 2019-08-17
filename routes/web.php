@@ -33,6 +33,7 @@ Route::get('/info/articles', 'HomeController@articles');
 Route::get('/info/bookInfo', 'HomeController@bookInfo');
 
 Route::get('/reviews', 'HomeController@reviews');
+Route::get('/eng/reviews', 'HomeController@reviewsEng');
 
 Route::get('/comments', 'CommentController@index');
 Route::get('/comments/store', 'CommentController@store');
