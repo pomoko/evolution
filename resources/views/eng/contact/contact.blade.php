@@ -5,9 +5,9 @@
 
 <div class="row">
   <div class="text-center col-xs-12">
-    <h2>Contact Us</h2>
+    <h2>Contact the Writer</h2>
         <p>You may use this form to contact the author of this book directly.</p>
-        <p>The content of your message will be kept private and confidential between you and the author.</p>
+        <p>The contents of your message will be kept private and confidential between you and the author.</p>
   </div>
 </div>  
 
