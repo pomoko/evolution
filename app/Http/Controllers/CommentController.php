@@ -16,6 +16,18 @@ use DateTime;
 
 class CommentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => [
+            'edit',
+            'delete',
+        ]]);
+
+        // $this->middleware('subscribed', ['except' => [
+        //     'fooAction',
+        //     'barAction',
+        // ]]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -72,7 +84,7 @@ class CommentController extends Controller
 //         }
 
         $datePersian = getPersianDateWithMonthName(date("Y", time())."-".date("m", time())."-".date("d", time()));
-        $insert = Comment::create(['name'=>$request->name, 'email'=>"email", 'comment'=>$request->comment, "date_persian"=>$datePersian]);
+        $insert = Comment::create(['name'=>trim(ucwords($request->name)), 'email'=>"email", 'comment'=>trim($request->comment), "date_persian"=>$datePersian]);
 
         $comments = Comment::all();
 
@@ -106,7 +118,7 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
         //
     }
@@ -118,9 +130,9 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Comment::where("id", $request->id)->update(['comment'=>trim($request->comment)]);
     }
 
     /**
@@ -129,8 +141,8 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        Comment::where('id', $request->id)->delete();
     }
 }

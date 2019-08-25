@@ -328,7 +328,5 @@
       $("#addCommentBtn").removeClass("hidden");
     }
   </script>
-}
-
 </body>
 </html>

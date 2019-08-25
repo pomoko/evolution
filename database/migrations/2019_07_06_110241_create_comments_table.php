@@ -21,6 +21,8 @@ class CreateCommentsTable extends Migration
             $table->string('comment', 3500);
             $table->string('date_persian');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

@@ -38,6 +38,8 @@ Route::get('/eng/reviews', 'HomeController@reviewsEng');
 Route::get('/comments', 'CommentController@index');
 Route::get('/comments/store', 'CommentController@store');
 Route::get('/comments/getAll', 'CommentController@getAll');
+Route::post('/comments/delete', 'CommentController@delete');
+Route::post('/comments/update', 'CommentController@update');
 
 //english
 Route::get('/eng/info/preface', 'HomeController@prefaceEng');

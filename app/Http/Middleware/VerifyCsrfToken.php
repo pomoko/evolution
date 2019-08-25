@@ -19,7 +19,9 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        "/contact/sendMail"
+        "/contact/sendMail",
+        "/comments/update",
+        "/comments/delete"
         //
     ];
 }

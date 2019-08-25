@@ -158,6 +158,62 @@ $(document).on('change', '#selectOrder', function(e){
 
 });
 
+$(document).on('click', '.delete', function(e){
+    e.preventDefault();
+    e.preventDefault();
+    var container = $(this).parents('.commentContainer');
+    var id = container.find(".commentId").val();
+    
+    if (confirm("Are you sure you want to delete")) {
+        $.ajax({
+            method: "POST",
+            url: "/comments/delete",
+            data: {id:id},
+            // data: $('#associatePersonalityWithFilmForm').serialize(),
+            success:function(data){
+                container.hide("slow");
+            },
+            error:function(error){ }
+        }) 
+    } 
+});
+
+$(document).on('click', '.update', function(e){
+    e.preventDefault();
+    $(this).parents('.commentContainer').find('.commentUpdate').removeClass('hidden');
+    $(this).parents('.commentContainer').find('.commentTextRow').addClass('hidden');
+
+});
+
+$(document).on('click', '.btnUpdateSubmit', function(e){
+    e.preventDefault();
+    var container = $(this).parents('.commentContainer');
+    var id = container.find(".commentId").val()
+    var comment = container.find(".inputCommentUpdate").val();
+    $.ajax({
+        method: "POST",
+        url: "/comments/update",
+        data: {id:id, comment:comment},
+        // data: $('#associatePersonalityWithFilmForm').serialize(),
+        success:function(data){
+ 
+
+            container.find('.commentUpdate').addClass('hidden');
+            container.find('.commentTextRow').removeClass('hidden');
+            container.find('.commentText').html(container.find(".inputCommentUpdate").val());  
+
+        },
+        error:function(error){ }
+    })  
+
+});
+
+$(document).on('click', '.btnUpdateCancel', function(e){
+    e.preventDefault();
+    $(this).parents('.commentContainer').find('.commentUpdate').addClass('hidden');
+    $(this).parents('.commentContainer').find('.commentTextRow').removeClass('hidden');
+
+});
 
 $(document).on('click', '.btnSubmitComment', function(e){
 

@@ -218,7 +218,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">درباره کتاب<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/info/bookInfo">اطلاعات</a></li>
-                <li><a href="/info/preface">مقدمه</a></li>
+                <li><a href="/info/preface">پیشگفتار</a></li>
                 <li><a href="/info/contents">فهرست</a></li>
                 <li><a href="/info/articles">نمونه مقالات</a></li>
               </ul>
@@ -256,12 +256,12 @@
         <div class="footer-logo">
           <a href="/"><img class="img-responsive" src="images/logo.png" alt=""></a>
         </div>
-      </div>
-      <div class="container text-center hidden">
+      </div><a href="/login" style="color:white !important; margin: 10px;">Admin</a>
+      <div class="container text-center">
         <div class="footer-logo">
                 <ul class="address">
-<!--                   <li><i class="fa fa-map-marker"></i> <span> آدرس:</span>خیابان جمهوری, نرسیده به بهارستان, خیابان ملت, پلاک ۱۰, زنگ ۳</li>
- -->
+<!--                   <li><i class="fa fa-map-marker"></i> <a> آدرس:</a>خیابان جمهوری, نرسیده به بهارستان, خیابان ملت, پلاک ۱۰, زنگ ۳</li> -->
+
 <!--                   <li><i class="fa fa-map-marker"></i> <span> آدرس:</span>ولی  عصر, خیابان کاج آبادی, پلاک ۷۲, زنگ ۱,  کد پستی ۱۹۶۶۹۱۳۶۶۱</li>
                   <li><i class="fa fa-phone"></i> <span> تلفن:</span> ۹۴۸۶ ۲۲۰۵ ۲۱ ۹۸+</li>
                   <li><i class="fa fa-envelope"></i> <span>ایمیل: </span>info@karjib.com</li> -->
@@ -328,7 +328,5 @@
       $("#addCommentBtn").removeClass("hidden");
     }
   </script>
-}
-
 </body>
 </html>

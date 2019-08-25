@@ -1,3 +1,10 @@
+<?php $isAdmin = false; ?>
+@if(Auth::user())
+  @if(Auth::user()->is_admin)
+<?php $isAdmin = true; ?>
+  @endif
+@endif
+
 @extends('layouts.master')
 @section('title', 'نظرات خوانندگان')
 
@@ -145,23 +152,44 @@
       <hr/>
       <div id="comments">
         @foreach($comments as $comment)
-          <div class="row">
-            <div class="col-md-12">
-              <h4><strong>{{$comment->name}}</strong></h4>
+          <div class='commentContainer'>
+            <div class="row">
+              <div class="col-xs-12">
+                <h4><strong>{{$comment->name}}</strong></h4>
+                @if($isAdmin)
+                <i class='delete fa fa-trash fa-2x'></i> <i class='update fa fa-edit fa-2x'></i>
+                <input type="hidden" name="id" class="commentId" value="{{$comment->id}}">
+                @endif
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-muted">
-              {{$comment->date_persian}}
-              
+            <div class="row">
+              <div class="col-xs-12 text-muted">
+                {{$comment->date_persian}}
+                
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              {{$comment->comment}}
+            <div class="commentUpdate hidden">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <input class='form-control inputCommentUpdate' type="text" name="inputCommentUpdate" value="{{$comment->comment}}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <button class="btn btn-xs btn-primary btnUpdateSubmit">update</button>
+                  <button class="btn btn-xs btn-primary btnUpdateCancel">cancel</button>
+                </div>
+              </div>
+            </div>  
+            <div class="row commentTextRow">
+              <div class="col-xs-12 commentText">
+                {{$comment->comment}}
+              </div>
             </div>
+            <hr/>
           </div>
-          <hr/>
         @endforeach
       </div><!--comments-->
 

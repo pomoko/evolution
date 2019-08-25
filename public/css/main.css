@@ -932,6 +932,10 @@ ul.address {
   color:#fff;
 }
 
+#footer ul li a {
+  color:white;
+}
+
 .footer-top {
   position: relative;
   padding:30px 0
