@@ -12,6 +12,12 @@
             <hr/>
 
             <div class="row">
+              <div class="col-xs-12">
+<img src={{asset("img/sampleArticles/40.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+
+              </div>
+            </div>
+            <div class="row">
               <div class="col-md-4 col-sm-12"><img src={{asset("img/book.jpg")}} class="img-responsive rounded mx-auto d-block" alt="book"> </div>
               <div class="col-md-8 col-sm-12 text-right"><h3>آیا میدانستید که....؟</h3></div>
             </div>
