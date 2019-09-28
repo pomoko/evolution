@@ -220,7 +220,7 @@
                 <li><a href="/eng/info/bookInfo">Book Info</a></li>
                 <li><a href="/eng/info/contents">Table of Contents</a></li>
                 <li><a href="/eng/info/articles">Sample Articles</a></li>
-                <li><a href="/eng/info/reference">Refrences</a></li>
+                <li><a href="/eng/info/reference">References</a></li>
               </ul>
             </li>
             <li class="scroll"><a href="/eng/reviews">Book Reviews</a></li>  
@@ -322,6 +322,8 @@
   <script type="text/javascript" src={{asset("js/main.js")}}></script>
   <script type="text/javascript" src={{asset("js/ajax.js")}}></script>
   <script type="text/javascript" src={{asset("js/helper.js")}}></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.js" integrity="sha256-vZy89JbbMLTO6cMnTZgZKvZ+h4EFdvPFupTQGyiVYZg=" crossorigin="anonymous"></script>
+ -->  
 
   <script type="text/javascript">
     if($('#commentsPage').length){
