@@ -9,11 +9,68 @@
         <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>نمونه مقالات</h2>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/31.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/35.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
             <hr/>
 
             <div class="row">
               <div class="col-xs-12">
                 <img src={{asset("img/sampleArticles/40.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/42.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/43.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/44.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/62.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
+            
+            <hr/>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/sampleArticles/69.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
               </div>
             </div>
             
