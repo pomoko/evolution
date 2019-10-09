@@ -63,6 +63,12 @@
                 <img src={{asset("img/contents/fa/contentsFa9.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
               </div>
             </div>
+            
+            <div class="row">
+              <div class="col-xs-12">
+                <img src={{asset("img/contents/fa/contentsFa10.jpg")}} class="img-responsive center-block img-rounded" alt="Responsive image">
+              </div>
+            </div>
         </div>
       </div> 
 
