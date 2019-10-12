@@ -217,8 +217,8 @@
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">درباره کتاب<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/info/bookInfo">اطلاعات</a></li>
-                <li><a href="/info/contents">فهرست</a></li>
+<!--                 <li><a href="/info/bookInfo">اطلاعات</a></li>
+ -->                <li><a href="/info/contents">فهرست</a></li>
                 <li><a href="/info/preface">پیشگفتار</a></li>
                 <li><a href="/info/articles">نمونه مقالات</a></li>
               </ul>
