@@ -137,7 +137,7 @@ class HomeController extends Controller
 
     public function refrencesEng()
     {
-        return view('eng.info.refrences.refrences');
+        return view('eng.info.bookInfo.bookInfo');
     }
 
 
