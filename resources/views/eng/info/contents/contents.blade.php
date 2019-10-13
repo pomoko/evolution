@@ -22,7 +22,7 @@
                         <h2 class="text-center">Table of Contents</h2>
                         <div id="tableOfContents"></div>
                         <script type="text/javascript" src={{asset("js/pdfobject.js")}}></script>
-                        <script>PDFObject.embed("/pdf/contentsMain.pdf", "#tableOfContents");</script>
+                        <script>PDFObject.embed("/pdf/ContentsMain.pdf", "#tableOfContents");</script>
                   </div><!--col-->
             </div><!--row-->
             <hr/>
@@ -31,7 +31,7 @@
                         <h2 class="text-center">Boxes</h2>
                         <div id="boxes"></div>
                         <script type="text/javascript" src={{asset("js/pdfobject.js")}}></script>
-                        <script>PDFObject.embed("/pdf/contentsBox.pdf", "#boxes");</script>
+                        <script>PDFObject.embed("/pdf/ContentsBox.pdf", "#boxes");</script>
                   </div><!--col-->
             </div><!--row-->
       </div><!--container-->
