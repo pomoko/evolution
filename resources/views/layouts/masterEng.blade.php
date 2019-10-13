@@ -220,7 +220,7 @@
                 <li><a href="/eng/info/bookInfo">Book Info</a></li>
                 <li><a href="/eng/info/contents">Table of Contents</a></li>
                 <li><a href="/eng/info/articles">Sample Articles</a></li>
-                <li><a href="/eng/info/reference">References</a></li>
+                <li><a href="/eng/info/references">References</a></li>
               </ul>
             </li>
             <li class="scroll"><a href="/eng/reviews">Book Reviews</a></li>  
