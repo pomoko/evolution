@@ -135,9 +135,9 @@ class HomeController extends Controller
         return view('eng.info.bookInfo.bookInfo');
     }
 
-    public function refrencesEng()
+    public function referencesEng()
     {
-        return view('eng.info.refrences.refrences');
+        return view('eng.info.references.references');
     }
 
 
