@@ -135,6 +135,11 @@ class HomeController extends Controller
         return view('eng.info.bookInfo.bookInfo');
     }
 
+    public function refrencesEng()
+    {
+        return view('eng.info.refrences.refrences');
+    }
+
 
 
 }
