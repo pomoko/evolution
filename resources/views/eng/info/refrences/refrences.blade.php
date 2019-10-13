@@ -1,5 +1,5 @@
-@extends('layouts.master')
-@section('سمفونی پیدایش', 'فهرست')
+@extends('layouts.masterEng')
+@section('Symphony of Evolution', 'Refrences')
 
 @section('content')
 
