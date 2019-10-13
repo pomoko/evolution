@@ -46,7 +46,7 @@ Route::get('/eng/info/preface', 'HomeController@prefaceEng');
 Route::get('/eng/info/contents', 'HomeController@contentsEng');
 Route::get('/eng/info/articles', 'HomeController@articlesEng');
 Route::get('/eng/info/bookInfo', 'HomeController@bookInfoEng');
-Route::get('/eng/info/references', 'HomeController@refrencesEng');
+Route::get('/eng/info/references', 'HomeController@referencesEng');
 
 Route::get('/eng/contact', 'HomeController@contactEng');
 Route::get('/eng/comments', 'CommentController@indexEng');
