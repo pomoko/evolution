@@ -138,6 +138,11 @@ class HomeController extends Controller
     public function referencesEng()
     {
         return view('eng.info.references.references');
+    }    
+
+    public function messageEng()
+    {
+        return view('eng.info.message.message');
     }
 
 

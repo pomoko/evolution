@@ -218,6 +218,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Book Information<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/eng/info/bookInfo">Book Info</a></li>
+                <li><a href="/eng/info/message">Author's Message</a></li>
                 <li><a href="/eng/info/contents">Table of Contents</a></li>
                 <li><a href="/eng/info/articles">Sample Articles</a></li>
                 <li><a href="/eng/info/references">References</a></li>
