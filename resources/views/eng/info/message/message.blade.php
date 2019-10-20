@@ -8,7 +8,7 @@
       <div class="row">
         <div class="text-center col-sm-8 col-sm-offset-2">
           <h2>Message from the Author</h2>
-          <p class='text-left>Symphony of Evolution is a quarto-sized, 442-page book dealing with the birth
+          <p class='text-left'>Symphony of Evolution is a quarto-sized, 442-page book dealing with the birth
 of life and the evolution of humans.<br/>
 The 10-chapter book starts with the Big Bang and the birth of the Universe. It then
 continues with the birth of the Milky Way, the Solar System and the Planet Earth.<br/>
@@ -27,7 +27,7 @@ published in due time.</p>
         </div>
       </div> 
     </div>
-  </section><!--/#services-->
+  </section>
 
 
 
