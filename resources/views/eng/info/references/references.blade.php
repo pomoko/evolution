@@ -12,7 +12,7 @@
   .list-group-item{
       text-transform: capitalize !important;
   }
-  .pdfobject-container { height: 30rem; }
+  .pdfobject-container { height: 40rem; }
 
 </style>
 <section id="contents">
