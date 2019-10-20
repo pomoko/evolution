@@ -22,7 +22,7 @@
                         <h2 class="text-center">Table of Contents</h2>
                         <div id="tableOfContents"></div>
                         <script type="text/javascript" src={{asset("js/pdfobject.js")}}></script>
-                        <script>PDFObject.embed("/pdf/en/refrences/Refrences.pdf", "#tableOfContents");</script>
+                        <script>PDFObject.embed("/pdf/en/references/References.pdf", "#tableOfContents");</script>
                   </div><!--col-->
             </div><!--row-->
 
