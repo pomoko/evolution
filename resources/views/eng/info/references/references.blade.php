@@ -3,7 +3,34 @@
 
 @section('content')
 
-  <section id="services">
+<style type="text/css">
+  .contentTitle{
+  }
+  .contentSub{
+    padding-left: 50px;
+  }
+  .list-group-item{
+      text-transform: capitalize !important;
+  }
+  .pdfobject-container { height: 30rem; }
+
+</style>
+<section id="contents">
+      <div class="container">
+            <div class="row">
+                  <div class="col-sm-8 col-sm-offset-2">
+                        <h2 class="text-center">Table of Contents</h2>
+                        <div id="tableOfContents"></div>
+                        <script type="text/javascript" src={{asset("js/pdfobject.js")}}></script>
+                        <script>PDFObject.embed("/pdf/en/refrences/Refrences.pdf", "#tableOfContents");</script>
+                  </div><!--col-->
+            </div><!--row-->
+
+      </div><!--container-->
+</section>
+
+
+<!--   <section id="services">
     <div class="container">
       <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
         <div class="row">
@@ -44,7 +71,7 @@
       </div> 
 
     </div>
-  </section><!--/#services-->
+  </section><!--/#services--> -->
 
 
 
