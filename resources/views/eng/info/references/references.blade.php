@@ -19,7 +19,7 @@
       <div class="container">
             <div class="row">
                   <div class="col-sm-8 col-sm-offset-2">
-                        <h2 class="text-center">Table of Contents</h2>
+                        <h2 class="text-center">References</h2>
                         <div id="tableOfContents"></div>
                         <script type="text/javascript" src={{asset("js/pdfobject.js")}}></script>
                         <script>PDFObject.embed("/pdf/en/references/References.pdf", "#tableOfContents");</script>
