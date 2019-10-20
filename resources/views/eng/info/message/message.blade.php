@@ -11,7 +11,7 @@
           <p class='text-left'><strong>Symphony of Evolution</strong> is a quarto-sized, 442-page book dealing with the birth
 of life and the evolution of humans.<br/>
 The 10-chapter book starts with the Big Bang and the birth of the Universe. It then
-continues with the birth of the Milky Way, the Solar System and the Planet Earth.<br/>
+continues with the birth of the Milky Way, the Solar System and Planet Earth.<br/>
 The title of this first chapter is “Birth of the Earth”.<br/>
 Chapter two, titled “Birth of Life”, deals with the formation of the Moon, the Earth’s
 oceans and life itself.<br/>
